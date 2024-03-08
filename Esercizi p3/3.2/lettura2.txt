@@ -1,0 +1,10 @@
+read[x,yz];
+conditional [
+    option  (> x y) do
+    conditional [option (> x z) do print[x]]
+    else print[z] end
+]
+else
+   conditional
+   [ option (> y z) do print[y] ] else print[z] end
+end

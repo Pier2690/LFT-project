@@ -1,0 +1,32 @@
+public class Token {
+	public final int tag;
+	public final String lexeme;
+
+	public Token(int t) {
+		tag = t;
+		lexeme=null;
+	}
+
+	public Token(int t, String s) {
+		tag=t;
+		lexeme=s;
+    }
+
+    public String toString() {
+		return "<" + tag + ">";
+	}
+
+	public static final Token not = new Token('!'),
+			lpt = new Token('('),
+			rpt = new Token(')'),
+			lpq = new Token('['),
+			rpq = new Token(']'),
+			lpg = new Token('{'),
+			rpg = new Token('}'),
+			plus = new Token('+'),
+			minus = new Token('-'),
+			mult = new Token('*'),
+			div = new Token('/'),
+			semicolon = new Token(';'),
+			comma = new Token(',');
+}
